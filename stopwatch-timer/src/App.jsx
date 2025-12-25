@@ -32,17 +32,44 @@ function App() {
   const seconds = Math.floor((time % 60000) / 1000);
   const milliseconds = Math.floor((time % 1000) / 10);
   return (
-    <>
-    <h2 className='text-2xl text-red-600'>Stopwatch Timer</h2>
-    <h3>
-      {String(minutes).padStart(2, "0")};
-      {String(seconds).padStart(2, "0")};
-      {String(milliseconds).padStart(2, "0")};  
-    </h3>
-    <button onClick={() => setIsRunning(true)}>Start</button>
-    <button onClick={() => setIsRunning(false)}>Stop</button>
-    <button onClick={handleReset}>Reset</button>
-    </>
+    <div className="min-h-screen flex items-center justify-center bg-gray-900">
+      <div className="bg-gray-800 text-white p-8 rounded-xl shadow-lg w-80 text-center">
+        
+        <h2 className="text-3xl font-bold mb-6 text-red-500">
+          Stopwatch
+        </h2>
+
+        <div className="text-4xl font-mono mb-8">
+          {String(minutes).padStart(2, "0")}:
+          {String(seconds).padStart(2, "0")}:
+          {String(milliseconds).padStart(2, "0")}
+        </div>
+
+        <div className="flex justify-between gap-3">
+          <button
+            onClick={() => setIsRunning(true)}
+            className="flex-1 bg-green-500 hover:bg-green-600 text-white py-2 rounded-lg transition"
+          >
+            Start
+          </button>
+
+          <button
+            onClick={() => setIsRunning(false)}
+            className="flex-1 bg-yellow-500 hover:bg-yellow-600 text-white py-2 rounded-lg transition"
+          >
+            Stop
+          </button>
+
+          <button
+            onClick={handleReset}
+            className="flex-1 bg-red-500 hover:bg-red-600 text-white py-2 rounded-lg transition"
+          >
+            Reset
+          </button>
+        </div>
+
+      </div>
+    </div>
   )
 }
 

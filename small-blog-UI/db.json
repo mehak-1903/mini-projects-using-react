@@ -1,0 +1,39 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "My First Post",
+      "author": "Alice",
+      "date": "2025-12-01",
+      "body": "This is the first post. Welcome to my blog where I share thoughts on web development, React, and more!"
+    },
+    {
+      "id": 2,
+      "title": "Another Post",
+      "author": "Bob",
+      "date": "2025-12-10",
+      "body": "This is another post. Today I want to discuss how to use Tailwind CSS effectively in React projects."
+    },
+    {
+      "id": 3,
+      "title": "React Router Basics",
+      "author": "Charlie",
+      "date": "2025-12-15",
+      "body": "React Router is a powerful library to handle routing in React apps. Let's explore its core features with examples."
+    },
+    {
+      "id": 4,
+      "title": "Understanding useEffect Hook",
+      "author": "Diana",
+      "date": "2025-12-20",
+      "body": "The useEffect hook lets you perform side effects in React components. This post explains its use and common pitfalls."
+    },
+    {
+      "id": 5,
+      "title": "Styling React Apps with Tailwind",
+      "author": "Ethan",
+      "date": "2025-12-25",
+      "body": "Tailwind CSS is a utility-first CSS framework that works great with React. Here are some tips to get started quickly."
+    }
+  ]
+}

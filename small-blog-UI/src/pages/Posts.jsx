@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import BlogCard from "./Blogcard";
+import PostCard from "../components/PostCard";
 
-function Blog() {
+function Posts() {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -22,12 +22,15 @@ function Blog() {
   if (posts.length === 0) return <p className="text-white text-center mt-10">No posts found.</p>;
 
   return (
-    <div className="max-w-5xl mx-auto p-6 bg-black min-h-screen">
+    <div className="max-w-5xl mx-auto p-10 bg-black min-h-screen">
+      <div className="grid md:grid-cols-2 gap-6">
+
       {posts.map((post) => (
-        <BlogCard key={post.id} post={post} />
+        <PostCard key={post.id} post={post} />
       ))}
+      </div>
     </div>
   );
 }
 
-export default Blog;
+export default Posts;

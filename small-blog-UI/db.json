@@ -16,20 +16,27 @@
     },
     {
       "id": 3,
+      "title": "Building Pages with React",
+      "author": "Diana",
+      "date": "2025-12-18",
+      "body": "This blog post explains how to build pages using React. You will learn about components, JSX, and how to structure a React application to create reusable and dynamic pages."
+    },
+    {
+      "id": 4,
       "title": "React Router Basics",
       "author": "Charlie",
       "date": "2025-12-15",
       "body": "React Router is a powerful library to handle routing in React apps. Let's explore its core features with examples."
     },
     {
-      "id": 4,
+      "id": 5,
       "title": "Understanding useEffect Hook",
       "author": "Diana",
       "date": "2025-12-20",
       "body": "The useEffect hook lets you perform side effects in React components. This post explains its use and common pitfalls."
     },
     {
-      "id": 5,
+      "id": 6,
       "title": "Styling React Apps with Tailwind",
       "author": "Ethan",
       "date": "2025-12-25",

@@ -24,7 +24,6 @@ function Posts() {
   return (
     <div className="max-w-5xl mx-auto p-10 bg-black min-h-screen">
       <div className="grid md:grid-cols-2 gap-6">
-
       {posts.map((post) => (
         <PostCard key={post.id} post={post} />
       ))}

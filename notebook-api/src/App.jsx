@@ -15,6 +15,13 @@ function App() {
     setAddText(addText.filter((item) => item.id !== id))
   }
 
+  const updatedTodo = (id) => {
+    const updatedText = prompt('Enter your updated text here.');
+    if(!updatedText || updatedText.trim() === "") return;
+    setAddText(addText.map((item) => item.id === id ? {...item, text: updatedText} : item))
+  }
+  
+
   return(
     <>
       <h2>Notebook App</h2>
@@ -23,7 +30,11 @@ function App() {
 
       <ul>
         {addText.map((item) => (
-          <li key={item.id}>{item.text}<button onClick={() => deleteTodo(item.id)}>Delete</button></li>
+          <li key={item.id}>
+            {item.text}
+            <button onClick={() => deleteTodo(item.id)}>Delete</button>
+            <button onClick={() => updatedTodo(item.id)}>Update</button>
+          </li>
         ))}
         
       </ul>

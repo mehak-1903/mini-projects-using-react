@@ -1,9 +1,22 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 
 function App() {
   const [inputText, setInputText] = useState("");    // type input text
   const [addText, setAddText] = useState([]);       // button clicked => adding text to the list
+
+  // Load from local storage
+  useEffect(() => {
+    const savedTodos = JSON.parse(localStorage.getItem("todos"));
+    if(savedTodos){
+      setAddText(savedTodos);
+    }
+  }, []);
+
+  // Save LocalStorage
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(addText))
+  }, [addText]);
 
   const addTodo = () => {
     if(inputText.trim() === "") return;  // if input field is an empty string -> return
